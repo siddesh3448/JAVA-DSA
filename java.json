@@ -1,0 +1,18 @@
+{
+  "psvm": {
+    "scope": "java",
+    "prefix": "psvm",
+    "body": [
+      "public static void main(String[] args) {",
+      "    $0",
+      "}"
+    ]
+  },
+  "sout": {
+    "scope": "java",
+    "prefix": "sout",
+    "body": [
+      "System.out.println($0);"
+    ]
+  }
+}
