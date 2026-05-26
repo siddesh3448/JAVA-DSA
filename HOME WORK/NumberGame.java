@@ -1,30 +1,33 @@
 import java.util.*;
+
 public class NumberGame {
-    public static void Game(int num, int guessed){
+
+    public static void Game(int target){
         Scanner sc = new Scanner(System.in);
         int guess = 0;
-        while(guess==guessed){
-            System.out.println("Enter guessed number: ");
+
+        while(guess != target){
+            System.out.print("Enter guessed number: ");
             guess = sc.nextInt();
-            if(guess>=50){
+
+            if(guess < target){
                 System.out.println("Too low");
-            }else if(guess<=100){
-                System.out.println("Too High");
-            }else if(guess==guessed){
+            } else if(guess > target){
+                System.out.println("Too high");
+            } else {
                 System.out.println("Correct Guess!!!");
             }
         }
     }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter number btw 1-100");
+        System.out.print("Enter number between 1-100: ");
         int n = sc.nextInt();
 
-       
-        int g = sc.nextInt();
+        Game(n);
 
-        Game(n, g);
-        
+        sc.close();
     }
 }
